@@ -1,2 +1,10 @@
-[{"retcode":"0","retmsg":"ok","fseqno":null,"serialno":null,"nextTag":null,"rdlist":null,"bean":null,"list":[{"areaId":"1","areaName":"1#"}]},
-{"retcode":"0","retmsg":"ok","fseqno":null,"serialno":null,"nextTag":null,"rdlist":null,"bean":null,"list":[{"areaId":"2","areaName":"上海立信会计金融学院"}]}]
+[
+    {
+        "areaId": "1",
+        "areaName": "1#"
+    },
+    {
+        "areaId": "2",
+        "areaName": "上海立信会计金融学院"
+    }
+]
