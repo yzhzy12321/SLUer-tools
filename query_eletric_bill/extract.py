@@ -1,7 +1,6 @@
 import re
 import datetime
-time=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print(time)
+
 def html_tag_rm(content: str):#提取出网页上的电表数据
 	dr = re.compile(r'<[^>]+>',re.S)
 	return dr.sub('',content)
@@ -18,11 +17,13 @@ def extract_data(html:str,txt='2.txt'):
             index=i
             break
     s=s[1:index]#截取到度数
+    time=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    # print(time)
     s.append(time)#添加时间戳
-    s='\n'+str(s)
+    s=str(s)
     print(s)
     with open(txt,'a',encoding='utf-8')as f:#写入到文件中
-        f.writelines(s)
+        f.writelines('\n'+s)
         f.close()
         
 if __name__=='__main__':
